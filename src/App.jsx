@@ -8,6 +8,7 @@ import fotos from "./fotos.json"
 import { useState, useEffect } from "react"
 import ModalZoom from "./componentes/ModalZoom"
 import Rodape from "./componentes/Rodape"
+import bannerBackground from './assets/banner.png'
 
 const FundoGradiente = styled.div`
   background: linear-gradient(174.61deg, #041833 4.16%, #04244F 48%, #154580 96.76%);
@@ -79,7 +80,7 @@ const App = () => {
           <BarraLateral />
           <ConteudoGaleria>
             <Banner
-              backgroundImage="/src/assets/banner.png"
+              backgroundImage={bannerBackground}
               texto="A galeria mais completa de fotos do espaço!" />
             <Galeria
               aoFotoSelecionada={foto => setFotoComZoom(foto)}
